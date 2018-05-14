@@ -1,0 +1,19 @@
+extends: airbnb-base
+rules:
+  quotes: 
+  - error
+  - double
+  no-underscore-dangle: 
+  - warn
+  - allowAfterThis: true
+  no-undef: off
+  no-unused-vars: off
+  no-plusplus: off
+  comma-dangle: off
+  import/no-unresolved: off
+  import/prefer-default-export: warn
+  import/extensions: off
+  no-restricted-globals: off
+parser: typescript-eslint-parser
+plugins:
+- typescript
