@@ -1,7 +1,7 @@
 import { Router } from "express";
 import User from "../models/user";
-import users from "../users";
-import games from "../games";
+import users from "../models/users";
+import games from "../models/games";
 import guid from "../utils/guid";
 import Game from "../models/game";
 

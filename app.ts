@@ -1,5 +1,5 @@
-import express from "express";
-import { Request, Response, NextFunction } from "express";
+import express from "express"; //eslint-disable-line
+import { Request, Response, NextFunction } from "express"; //eslint-disable-line
 import { HttpError } from "./utils/interfaces";
 
 const path = require("path");
