@@ -1,7 +1,10 @@
 export default class Field {
-  private fieldMatrix: number[][];
+  fieldMatrix: number[][];
   private size: number;
   constructor(size: number) {
+    if (size <= 0) {
+      throw new Error("invalid size");
+    }
     this.size = size;
 
     this.fieldMatrix = [];
@@ -69,6 +72,12 @@ export default class Field {
     return this.getMatrixSum() > 0 ? -1 : 1;
   }
   setMove(sign: number, row: number, col: number): void {
+    if (row < 0 || col < 0 || row > this.size - 1 || col > this.size - 1) {
+      throw new Error("wrong coordinates");
+    }
+    if (this.getWinnerSign() !== 0) {
+      throw new Error("game has ended");
+    }
     if (this.getPendingSign() !== sign) {
       throw new Error("wrong turn");
     }
