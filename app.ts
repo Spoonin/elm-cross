@@ -1,7 +1,7 @@
 import express from "express"; //eslint-disable-line
 import { Request, Response, NextFunction } from "express"; //eslint-disable-line
 import { HttpError } from "./utils/interfaces";
-import authMiddleware from "./middlewares/authMiddleware";
+import authMiddleware from "./middlewares/auth";
 import anonymousRouter from "./routes/anon";
 import usersRouter from "./routes/users";
 import gamesRouter from "./routes/games";
