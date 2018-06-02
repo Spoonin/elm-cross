@@ -1,4 +1,6 @@
-extends: airbnb-base
+extends: 
+- airbnb-base
+- prettier
 rules:
   quotes: 
   - error
@@ -17,3 +19,4 @@ rules:
 parser: typescript-eslint-parser
 plugins:
 - typescript
+- prettier
