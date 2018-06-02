@@ -1,4 +1,4 @@
-import express from "express"; //eslint-disable-line
+import * as express from 'express'; //eslint-disable-line
 import { Request, Response, NextFunction } from "express"; //eslint-disable-line
 import { HttpError } from "./utils/interfaces";
 import authMiddleware from "./middlewares/auth";
@@ -12,7 +12,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 
 const app = express();
-
+export default app;
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -41,5 +41,3 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   res.status(err.status || 500);
   res.render("error");
 });
-
-module.exports = app;

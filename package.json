@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "tsc && node --experimental-modules ./server.js",
+    "start": "tsc && node ./server.js",
     "pretest": "tsc -m commonjs",
     "test": "mocha test/**/*.spec.js"
   },
