@@ -1,5 +1,7 @@
 .idea/
 .vscode/
 node_modules/
+elm-stuff/
+index.html
 /.eslintcache
 *.js
