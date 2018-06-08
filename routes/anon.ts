@@ -9,8 +9,7 @@ router.post("users/", (req, res) => {
     res.status(406).send("User exists");
   } else {
     users.set(req.body.id, new User(req.body.id));
-    res.cookie("userId", req.body.id);
-    res.send({ success: true });
+    res.send({ success: true, userId: req.body.id });
   }
 });
 
